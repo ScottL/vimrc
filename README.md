@@ -1,9 +1,8 @@
 ## Vimrc
 
-set nocompatible    " This line must be first or the changes you are expectingmay not be the changes that occur  
-
 ### General Settings   
 
+`set nocompatible`  
 `set noerrorbells`   
 `set novisualbell`  
 `set title`  
@@ -65,10 +64,12 @@ Expand tabs to spaces, set tab and indentation widths
 Set the number of columns in a new window   
 Max width of text being inserted   
 Word wraps 2 characters from the margin    
+Text wraping   
 
 `set columns=80`   
 `set textwidth=80`   
-`set wrapmargin=2`   
+`set wrapmargin=2`      
+`setlocal textwidth=80`     
 
 
 Set the number of columns a new window will have   
@@ -98,8 +99,6 @@ Autoindent
 
 ### Misc, Ease of Use
 
-Ignores files when autocompleting      
-
 Character that starts the autocompletion   
 Shows a list of possible autocompletions   
 show list and complete the first match    
@@ -112,16 +111,15 @@ Ignores files when autocompleting
 `:set nowritebackup`   
 `:set wildignore=*.o,*.bak,*.data,*.class`   
 
-autocmd BufNewFile [Mm]akefile* set formatoptions=croql comments=:#
-autocmd BufNewFile .vimrc,*.vim set formatoptions=croql comments=:\"
-autocmd FileType c,cpp,java set mps+==:;
+`autocmd BufNewFile [Mm]akefile* set formatoptions=croql comments=:#`   
+`autocmd BufNewFile .vimrc,*.vim set formatoptions=croql comments=:\"`   
+`autocmd FileType c,cpp,java set mps+==:;`   
 
-" For switching between many opened file by using ctrl+l or ctrl+h
-map <C-J> :next <CR>
-map <C-K> :prev <CR>
+For switching between many opened file by using ctrl+l or ctrl+h   
+`map <C-J> :next <CR>`   
+`map <C-K> :prev <CR>`   
 
-" Spelling toggle via F10 and F11
-map <F10> <Esc>setlocal spell spelllang=en_us<CR>
-map <F11> <Esc>setlocal nospell<CR>
+Spelling toggle via F10 and F11   
+`map <F10> <Esc>setlocal spell spelllang=en_us<CR>`   
+`map <F11> <Esc>setlocal nospell<CR>`  
 
-setlocal textwidth=80           " used for text wrapping
